@@ -6,6 +6,7 @@ crypto:
   access_code: 123
   email: cryptoh4ck3r@proton.me
   password: <%= User.digest('password') %>
+  admin: true
 
 mrB:
   username: Mr.B

@@ -16,9 +16,9 @@
         <li><%= link_to "About", about_path, id: 'ez_menu' %></li>
         <li><%= link_to "Contact", contact_path, id: 'ez_menu' %></li>
         <% if logged_in? %>
-          <li><%= link_to "Agents", users_path %></li>
-          <li class="dropdown">
-            <a href="#" id="account" class="dropdown-toggle">
+          <li><% if current_user.admin? %><%= link_to "Agents", users_path, id: 'ez_menu' %><% end %></li>
+          <li class="dropdown" id="ez_menu">
+            <a href="#" id="account" class="dropdown-toggle" style="color: #FFF">
               Account <b class="caret"></b>
             </a>
             <ul id="dropdown-menu" class="dropdown-menu">

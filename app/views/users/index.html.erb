@@ -1,9 +1,10 @@
 <% provide(:title, 'All Agents') %>
-<h1>All users</h1>
 
 <%= will_paginate %>
 
-<ul class="users">
+<ul class="users" style="background-color: #FFF; padding: 25px;">
+  <h1>Your Agents:</h1><br/>
+  <p style="text-align: center; font-size: 20px;">Total Number of Agents: <%= @users.count %></p>
   <% @users.each do |user| %>
     <li>
       <%= gravatar_for user, size: 50 %>
@@ -11,7 +12,7 @@
       <% if current_user.admin? && !current_user?(user) %>
         | <%= link_to "delete", user, data: { "turbo-method": :delete,
                                               turbo_confirm: "You sure?" } %>
-      <% end %>      
+      <% end %>
     </li>
   <% end %>
 </ul>

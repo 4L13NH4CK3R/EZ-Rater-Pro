@@ -8,6 +8,8 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= render 'layouts/shim' %>
+    <%= javascript_importmap_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
     <!-- Add Google Fonts; -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,6 +22,7 @@
       gtag('js', new Date());
       gtag('config', 'G-K5JNQX8XBT');
     </script>
+    <%= javascript_importmap_tags %>
 
   </head>
   <body>
@@ -27,7 +30,7 @@
     <div class="container">
       <% flash.each do |message_type, message| %>
         <div class="alert alert-<%= message_type %>"><%= message %></div>
-      <% end %>      
+      <% end %>
       <%= yield %>
     </div>
   </body>

@@ -1,1 +1,17 @@
-# EMPTY FOR NOW!
+crypto:
+  username: CryptoH4ck3r
+  first_name: Crypto
+  last_name: H4ck3r
+  agency_name: Texas Specialty Underwriters
+  access_code: 123
+  email: cryptoh4ck3r@proton.me
+  password: <%= User.digest('password') %>
+
+mrB:
+  username: Mr.B
+  first_name: Brent
+  last_name: TheMan
+  agency_name: Texas Specialty Underwriters
+  access_code: 123
+  email: brent@texasspecialty.com
+  password: <%= User.digest('password') %>

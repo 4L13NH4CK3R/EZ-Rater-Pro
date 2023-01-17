@@ -11,6 +11,12 @@ font-family: 'Orbitron', sans-serif;
 font-family: 'Righteous', cursive;
 */
 
+/* Dropdown menu */
+
+.dropdown-menu.active {
+  display: block;
+}
+
 $gray-medium-light: #eaeaea;
 
 @mixin box_sizing {
